@@ -19,6 +19,6 @@
 //   const newArray = filter(arr, fn); // [20, 30]
 // The function filters out values that are not greater than 10
 
-const filter = function(arr: number[], fn: Function) {
+const filter = function(arr: number[], fn: (el: number) => number) {
   return arr.filter(fn)
 };
