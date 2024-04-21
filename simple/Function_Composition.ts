@@ -33,6 +33,6 @@ const compose = function(functions: Function[]) {
   }
 };
 
-
- const fn = compose([(x: number) => x + 1, (x: number) => x * x, (x: number) => 2 * x])
-console.log(fn(4)); // 65
+//
+//  const fn = compose([(x: number) => x + 1, (x: number) => x * x, (x: number) => 2 * x])
+// console.log(fn(4)); // 65
