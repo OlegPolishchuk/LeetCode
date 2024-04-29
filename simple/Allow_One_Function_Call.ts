@@ -22,23 +22,23 @@
 // onceFn(2, 3, 6); // undefined, fn was not called
 // onceFn(4, 6, 8); // undefined, fn was not called
 
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type OnceFn = (...args: JSONValue[]) => JSONValue | undefined
-
-function once(fn: Function): OnceFn {
-  const set = new Set();
-
-  return function (...args) {
-    if (set.has(fn)) return undefined;
-
-    set.add(fn);
-
-    return fn(...args)
-  };
-}
-
-  let fn = (a:any,b: any,c: any) => (a + b + c)
-  let onceFn = once(fn)
-
-console.log(onceFn(1, 2, 3)); // 6
-console.log(onceFn(2, 3, 6)); // returns undefined without calling fn
+// type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+// type OnceFn = (...args: JSONValue[]) => JSONValue | undefined
+//
+// function once(fn: Function): OnceFn {
+//   const set = new Set();
+//
+//   return function (...args) {
+//     if (set.has(fn)) return undefined;
+//
+//     set.add(fn);
+//
+//     return fn(...args)
+//   };
+// }
+//
+//   let fn = (a:any,b: any,c: any) => (a + b + c)
+//   let onceFn = once(fn)
+//
+// console.log(onceFn(1, 2, 3)); // 6
+// console.log(onceFn(2, 3, 6)); // returns undefined without calling fn
